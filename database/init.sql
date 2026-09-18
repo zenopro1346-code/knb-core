@@ -48,11 +48,11 @@ CREATE TABLE IF NOT EXISTS audit_logs (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-INSERT INTO assets(code,kind,scale) VALUES
-  ('EUR','FIAT',2),
-  ('USD','FIAT',2),
-  ('GBP','FIAT',2),
-  ('BTC','CRYPTO',8),
-  ('USDC','STABLECOIN',6),
-  ('USDT','STABLECOIN',6)
+INSERT INTO assets(code, kind, scale) VALUES
+  ('EUR', 'FIAT', 2),
+  ('USD', 'FIAT', 2),
+  ('GBP', 'FIAT', 2),
+  ('BTC', 'CRYPTO', 8),
+  ('USDC', 'STABLECOIN', 6),
+  ('USDT', 'STABLECOIN', 6)
 ON CONFLICT (code) DO NOTHING;
