@@ -1,0 +1,12 @@
+{
+  "name": "knb-core",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "dev": "docker compose up --build",
+    "build": "npm run build --workspace apps/api && npm run build --workspace apps/web",
+    "test": "npm test --workspace apps/api",
+    "typecheck": "npm run typecheck --workspace apps/api"
+  }
+}
