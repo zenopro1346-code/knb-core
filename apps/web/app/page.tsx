@@ -8,17 +8,18 @@ export default function Home() {
       }}
     >
       <h1>KNB Core</h1>
+
       <p>
         <strong>SANDBOX ONLY</strong> — no real money, banking, or blockchain
         settlement.
       </p>
+
       <h2>System status</h2>
       <p>KNB Phase 0 sandbox is running.</p>
+
       <p>
         API:{' '}
-        <a href="http://localhost:3001/health">
-          http://localhost:3001/health
-        </a>
+        <a href="http://localhost:3001/health">http://localhost:3001/health</a>
       </p>
     </main>
   );
