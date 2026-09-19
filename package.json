@@ -2,7 +2,10 @@
   "name": "knb-core",
   "private": true,
   "version": "0.1.0",
-  "workspaces": ["apps/api", "apps/web"],
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
   "scripts": {
     "dev": "docker compose up --build",
     "build": "npm run build --workspace @knb/api && npm run build --workspace @knb/web",
@@ -29,7 +32,12 @@
     "vitest": "^2.1.8"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": "eslint --fix",
-    "*.{json,md,yml,yaml,css}": "prettier --write"
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
