@@ -5,7 +5,7 @@
   "workspaces": ["apps/api", "apps/web"],
   "scripts": {
     "dev": "docker compose up --build",
-    "build": "npm run build --workspace apps/api && npm run build --workspace apps/web",
+    "build": "npm run build --workspace @knb/api && npm run build --workspace @knb/web",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -13,7 +13,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "npm run typecheck --workspace @knb/api && npm run typecheck --workspace @knb/web",
     "prepare": "husky"
   },
   "devDependencies": {
